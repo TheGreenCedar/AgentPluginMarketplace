@@ -9,6 +9,22 @@ Codex plugin marketplace catalog for TheGreenCedar.
 - Display name: `TheGreenCedar`
 - Plugin entries: `codestory`, `codex-autoresearch`
 
+## Install Or Refresh
+
+Add or refresh the marketplace from the Git marketplace source:
+
+```powershell
+codex plugin marketplace add TheGreenCedar/AgentPluginMarketplace --ref main
+codex plugin marketplace upgrade TheGreenCedar
+```
+
+Replace a local-path marketplace entry with the Git marketplace source:
+
+```powershell
+codex plugin marketplace remove TheGreenCedar
+codex plugin marketplace add TheGreenCedar/AgentPluginMarketplace --ref main
+```
+
 ## CodeStory Plugin Source
 
 This catalog points the `codestory` plugin entry at the canonical package in
