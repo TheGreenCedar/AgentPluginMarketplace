@@ -28,10 +28,9 @@ codex plugin marketplace add TheGreenCedar/AgentPluginMarketplace --ref main
 ## CodeStory Plugin Source
 
 This catalog points the `codestory` plugin entry at the canonical package in
-[`TheGreenCedar/CodeStory`](https://github.com/TheGreenCedar/CodeStory/tree/dev/codestory-next/plugins/codestory)
-under `plugins/codestory`. The source package landed through
-[`TheGreenCedar/CodeStory#262`](https://github.com/TheGreenCedar/CodeStory/pull/262)
-at commit `3aa0847e00c1feddab9bb11fcf1bde63e22c5aeb`.
+[`TheGreenCedar/CodeStory`](https://github.com/TheGreenCedar/CodeStory/tree/main/plugins/codestory)
+under `plugins/codestory`. The current public release is
+[`v0.11.10`](https://github.com/TheGreenCedar/CodeStory/releases/tag/v0.11.10).
 
 The marketplace entry uses the Git subdirectory source shape:
 
