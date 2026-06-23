@@ -18,7 +18,7 @@
         "path": "plugins/codestory",
         "ref": "main"
       },
-      "category": "coding",
+      "category": "developer tools",
       "tags": ["codestory", "grounding", "mcp", "local"],
       "skills": "skills/",
       "hooks": "hooks/copilot-hooks.json"
