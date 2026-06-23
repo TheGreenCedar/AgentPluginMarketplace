@@ -37,7 +37,13 @@ under `plugins/codestory`. The current public release is
 Claude Code and GitHub Copilot CLI catalog files live in this marketplace repo
 and point at the same canonical CodeStory plugin source.
 
-The marketplace entry uses the Git subdirectory source shape:
+Validate the marketplace files after edits:
+
+```powershell
+node scripts/validate-marketplace.mjs
+```
+
+The Codex marketplace entry uses the Git subdirectory source shape:
 
 ```json
 {
@@ -45,6 +51,20 @@ The marketplace entry uses the Git subdirectory source shape:
     "source": "git-subdir",
     "url": "https://github.com/TheGreenCedar/CodeStory.git",
     "path": "plugins/codestory"
+  }
+}
+```
+
+The Claude Code and GitHub Copilot CLI catalog entries use the host-validated
+GitHub source shape:
+
+```json
+{
+  "source": {
+    "source": "github",
+    "repo": "TheGreenCedar/CodeStory",
+    "path": "plugins/codestory",
+    "ref": "main"
   }
 }
 ```
