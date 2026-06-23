@@ -1,0 +1,22 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "thegreencedar",
+  "description": "TheGreenCedar agent plugins.",
+  "owner": {
+    "name": "The Green Cedar",
+    "url": "https://github.com/TheGreenCedar"
+  },
+  "plugins": [
+    {
+      "name": "codestory",
+      "description": "Local CodeStory grounding backed by codestory-cli.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/TheGreenCedar/CodeStory.git",
+        "path": "plugins/codestory",
+        "ref": "main"
+      },
+      "category": "coding"
+    }
+  ]
+}
