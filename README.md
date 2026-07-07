@@ -32,7 +32,7 @@ codex plugin marketplace add TheGreenCedar/AgentPluginMarketplace --ref main
 This catalog points the `codestory` plugin entry at the canonical package in
 [`TheGreenCedar/CodeStory`](https://github.com/TheGreenCedar/CodeStory/tree/main/plugins/codestory)
 under `plugins/codestory`. The current public release is
-[`v0.13.8`](https://github.com/TheGreenCedar/CodeStory/releases/tag/v0.13.8).
+[`v0.13.10`](https://github.com/TheGreenCedar/CodeStory/releases/tag/v0.13.10).
 
 Claude Code and GitHub Copilot CLI catalog files live in this marketplace repo
 and point at the same canonical CodeStory plugin source.
