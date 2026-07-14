@@ -13,26 +13,40 @@ Codex plugin marketplace catalog for TheGreenCedar.
 
 ## Install Or Refresh
 
-Add or refresh the marketplace from the Git marketplace source:
+On macOS and Linux, add the Git marketplace and install CodeStory with:
+
+```sh
+codex plugin marketplace add TheGreenCedar/AgentPluginMarketplace --ref main
+codex plugin add codestory@TheGreenCedar
+```
+
+On Windows, use the native `codex.cmd` shim:
 
 ```powershell
-codex plugin marketplace add TheGreenCedar/AgentPluginMarketplace --ref main
+codex.cmd plugin marketplace add TheGreenCedar/AgentPluginMarketplace --ref main
+codex.cmd plugin add codestory@TheGreenCedar
+```
+
+Refreshing a marketplace updates its catalog snapshot; it does not replace an
+installed plugin. To update an existing CodeStory installation, refresh the
+catalog, remove the installed copy, and install it again:
+
+```sh
 codex plugin marketplace upgrade TheGreenCedar
+codex plugin remove codestory@TheGreenCedar
+codex plugin add codestory@TheGreenCedar
 ```
 
-Replace a local-path marketplace entry with the Git marketplace source:
-
-```powershell
-codex plugin marketplace remove TheGreenCedar
-codex plugin marketplace add TheGreenCedar/AgentPluginMarketplace --ref main
-```
+On Windows, run those refresh commands with `codex.cmd` instead of `codex`.
+Replace an existing local-path marketplace entry by removing `TheGreenCedar`
+first, then adding the Git source shown above.
 
 ## CodeStory Plugin Source
 
 This catalog points the `codestory` plugin entry at the canonical package in
 [`TheGreenCedar/CodeStory`](https://github.com/TheGreenCedar/CodeStory/tree/main/plugins/codestory)
 under `plugins/codestory`. The current public release is
-[`v0.14.3`](https://github.com/TheGreenCedar/CodeStory/releases/tag/v0.14.3).
+[`v0.15.0`](https://github.com/TheGreenCedar/CodeStory/releases/tag/v0.15.0).
 
 Claude Code and GitHub Copilot CLI catalog files live in this marketplace repo
 and point at the same canonical CodeStory plugin source.
