@@ -24,24 +24,32 @@ assert.ok(codestoryCodex, "missing Codex codestory entry");
 assert.ok(codestoryClaude, "missing Claude Code codestory entry");
 assert.ok(codestoryCopilot, "missing GitHub Copilot codestory entry");
 
+const codestorySourceSha = codestoryCodex.source?.sha ?? "";
+assert.match(
+  codestorySourceSha,
+  /^[0-9a-f]{40}$/u,
+  "Codex codestory source must use a full immutable commit SHA",
+);
+
 assert.deepEqual(codestoryCodex.source, {
   source: "git-subdir",
   url: "https://github.com/TheGreenCedar/CodeStory.git",
   path: "plugins/codestory",
+  sha: codestorySourceSha,
 });
 
 assert.deepEqual(codestoryClaude.source, {
   source: "github",
   repo: "TheGreenCedar/CodeStory",
   path: "plugins/codestory",
-  ref: "main",
+  ref: codestorySourceSha,
 });
 
 assert.deepEqual(codestoryCopilot.source, {
   source: "github",
   repo: "TheGreenCedar/CodeStory",
   path: "plugins/codestory",
-  ref: "main",
+  ref: codestorySourceSha,
 });
 
 assert.equal(codestoryCopilot.skills, "skills/");

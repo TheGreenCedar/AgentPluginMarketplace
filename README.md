@@ -43,13 +43,11 @@ first, then adding the Git source shown above.
 
 ## CodeStory Plugin Source
 
-This catalog points the `codestory` plugin entry at the canonical package in
-[`TheGreenCedar/CodeStory`](https://github.com/TheGreenCedar/CodeStory/tree/main/plugins/codestory)
-under `plugins/codestory`. The current public release is
+The CodeStory package lives in
+[`TheGreenCedar/CodeStory`](https://github.com/TheGreenCedar/CodeStory) under
+`plugins/codestory`. Each marketplace update pins all three catalogs to the
+same full CodeStory commit. The current public release is
 [`v0.15.0`](https://github.com/TheGreenCedar/CodeStory/releases/tag/v0.15.0).
-
-Claude Code and GitHub Copilot CLI catalog files live in this marketplace repo
-and point at the same canonical CodeStory plugin source.
 
 Validate the marketplace files after edits:
 
@@ -64,7 +62,8 @@ The Codex marketplace entry uses the Git subdirectory source shape:
   "source": {
     "source": "git-subdir",
     "url": "https://github.com/TheGreenCedar/CodeStory.git",
-    "path": "plugins/codestory"
+    "path": "plugins/codestory",
+    "sha": "<40-hex CodeStory commit>"
   }
 }
 ```
@@ -78,7 +77,7 @@ GitHub source shape:
     "source": "github",
     "repo": "TheGreenCedar/CodeStory",
     "path": "plugins/codestory",
-    "ref": "main"
+    "ref": "<same 40-hex CodeStory commit>"
   }
 }
 ```
