@@ -10,7 +10,7 @@
         "source": "git-subdir",
         "url": "https://github.com/TheGreenCedar/CodeStory.git",
         "path": "plugins/codestory",
-        "sha": "d35f09ae440e47df5a9fe0db459b7a64c27a002d"
+        "sha": "da6a257e3057ca2359fc9323b0787bd883181b56"
       },
       "policy": {
         "installation": "AVAILABLE",
