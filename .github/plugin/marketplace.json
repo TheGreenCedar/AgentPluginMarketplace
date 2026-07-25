@@ -16,7 +16,7 @@
         "source": "github",
         "repo": "TheGreenCedar/CodeStory",
         "path": "plugins/codestory",
-        "ref": "4fc19529af86f572d6c2597e4bdd85d691bcc6a1"
+        "ref": "d5a9a51c31901a23f3748f6004bd0e18ddd54168"
       },
       "category": "developer tools",
       "tags": ["codestory", "grounding", "mcp", "local"],
