@@ -17,7 +17,7 @@
         "source": "github",
         "repo": "TheGreenCedar/CodeStory",
         "path": "plugins/codestory",
-        "ref": "main"
+        "ref": "d35f09ae440e47df5a9fe0db459b7a64c27a002d"
       },
       "category": "developer tools"
     }
