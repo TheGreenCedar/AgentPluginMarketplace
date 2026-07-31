@@ -47,7 +47,7 @@ The CodeStory package lives in
 [`TheGreenCedar/CodeStory`](https://github.com/TheGreenCedar/CodeStory) under
 `plugins/codestory`. Each marketplace update pins all three catalogs to the
 same full CodeStory commit. The current public release is
-[`v0.16.0`](https://github.com/TheGreenCedar/CodeStory/releases/tag/v0.16.0).
+[`v0.16.3`](https://github.com/TheGreenCedar/CodeStory/releases/tag/v0.16.3).
 
 Validate the marketplace files after edits:
 
