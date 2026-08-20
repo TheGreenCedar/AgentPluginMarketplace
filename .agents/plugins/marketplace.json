@@ -6,6 +6,7 @@
   "plugins": [
     {
       "name": "codestory",
+      "version": "0.16.3",
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/TheGreenCedar/CodeStory.git",
