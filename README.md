@@ -7,7 +7,7 @@ Codex plugin marketplace catalog for TheGreenCedar.
 - Catalog file: `.agents/plugins/marketplace.json`
 - Catalog name: `TheGreenCedar`
 - Display name: `TheGreenCedar`
-- Plugin entries: `codestory`, `codex-autoresearch`
+- Plugin entries: `codestory`, `codex-autoresearch`, `teacher`
 - Claude Code catalog: `.claude-plugin/marketplace.json`
 - GitHub Copilot CLI catalog: `.github/plugin/marketplace.json`
 
@@ -94,6 +94,22 @@ under `plugins/codex-autoresearch`:
     "source": "git-subdir",
     "url": "https://github.com/TheGreenCedar/codex-autoresearch.git",
     "path": "plugins/codex-autoresearch"
+  }
+}
+```
+
+## Teacher Plugin Source
+
+The `teacher` entry points at the repository root of
+[`TheGreenCedar/teacher`](https://github.com/TheGreenCedar/teacher) and pins
+the published `0.1.0` package to an immutable commit:
+
+```json
+{
+  "source": {
+    "source": "url",
+    "url": "https://github.com/TheGreenCedar/teacher.git",
+    "sha": "<40-hex Teacher commit>"
   }
 }
 ```

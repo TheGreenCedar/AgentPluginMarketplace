@@ -19,10 +19,12 @@ assert.equal(copilot.metadata.description, "TheGreenCedar agent plugins.");
 const codestoryCodex = codex.plugins.find((plugin) => plugin.name === "codestory");
 const codestoryClaude = claude.plugins.find((plugin) => plugin.name === "codestory");
 const codestoryCopilot = copilot.plugins.find((plugin) => plugin.name === "codestory");
+const teacherCodex = codex.plugins.find((plugin) => plugin.name === "teacher");
 
 assert.ok(codestoryCodex, "missing Codex codestory entry");
 assert.ok(codestoryClaude, "missing Claude Code codestory entry");
 assert.ok(codestoryCopilot, "missing GitHub Copilot codestory entry");
+assert.ok(teacherCodex, "missing Codex teacher entry");
 
 const codestorySourceSha = codestoryCodex.source?.sha ?? "";
 assert.match(
@@ -54,5 +56,23 @@ assert.deepEqual(codestoryCopilot.source, {
 
 assert.equal(codestoryCopilot.skills, "skills/");
 assert.equal(codestoryCopilot.hooks, "hooks/copilot-hooks.json");
+
+const teacherSourceSha = teacherCodex.source?.sha ?? "";
+assert.equal(teacherCodex.version, "0.1.0");
+assert.match(
+  teacherSourceSha,
+  /^[0-9a-f]{40}$/u,
+  "Codex teacher source must use a full immutable commit SHA",
+);
+assert.deepEqual(teacherCodex.source, {
+  source: "url",
+  url: "https://github.com/TheGreenCedar/teacher.git",
+  sha: teacherSourceSha,
+});
+assert.deepEqual(teacherCodex.policy, {
+  installation: "AVAILABLE",
+  authentication: "ON_INSTALL",
+});
+assert.equal(teacherCodex.category, "Productivity");
 
 console.log("marketplace manifests ok");
