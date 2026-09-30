@@ -6,12 +6,12 @@
   "plugins": [
     {
       "name": "codestory",
-      "version": "0.17.6",
+      "version": "0.17.7",
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/TheGreenCedar/CodeStory.git",
         "path": "plugins/codestory",
-        "sha": "f3966cadd6d602f2ccb7e4c99e2d8afebe1e19b8"
+        "sha": "424d56b1b5452555460d528f40d08a231ac72a92"
       },
       "policy": {
         "installation": "AVAILABLE",
